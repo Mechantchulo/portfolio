@@ -42,11 +42,27 @@
 }
 
 * { box-sizing: border-box; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 html { scroll-padding-top: 90px; }
 body { margin: 0; background: var(--bg); color: var(--text); transition: background-color .42s ease, color .42s ease; }
 body, button, input { font-family: 'DM Sans', sans-serif; }
 button, a, input { -webkit-tap-highlight-color: transparent; }
 a { color: inherit; text-decoration: none; }
+.static-fallback { min-height: 100vh; padding: 32px 0 60px; background: #080e0d; color: #e7f3ed; }
+.static-fallback header, .static-fallback nav { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; }
+.static-fallback header { justify-content: space-between; padding-bottom: 28px; border-bottom: 1px solid #315342; }
+.static-fallback header > a { color: #00ff00; font-weight: 700; }
+.static-fallback main { padding-top: 42px; }
+.static-fallback section { padding: 20px 0 40px; border-bottom: 1px solid #315342; }
+.static-fallback h1, .static-fallback h2, .static-fallback h3 { font-family: 'IBM Plex Mono', monospace; }
+.static-fallback h1 { font-size: clamp(40px, 7vw, 72px); }
+.static-fallback h2 { font-size: clamp(28px, 4vw, 42px); }
+.static-fallback h3 { margin-bottom: 4px; font-size: 19px; }
+.static-fallback p { max-width: 75ch; color: #a3b8ad; line-height: 1.7; }
+.static-fallback article { margin: 22px 0; }
+.static-fallback article p { margin-top: 0; }
+.static-fallback a { text-decoration: underline; text-underline-offset: 3px; }
+.static-fallback footer { padding-top: 32px; color: #a3b8ad; }
 button { cursor: pointer; }
 ::selection { background: var(--accent); color: var(--accent-text); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }

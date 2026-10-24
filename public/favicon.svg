@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Erick Mutua monogram">
+  <rect width="64" height="64" rx="12" fill="#080e0d"/>
+  <path d="M14 17h19v5H20v8h11v5H20v7h13v5H14z" fill="#e7f3ed"/>
+  <path d="M36 17h5l9 12 9-12h5v30h-6V27l-8 10-8-10v20h-6z" fill="#00ff00" transform="translate(-6 0)"/>
+</svg>

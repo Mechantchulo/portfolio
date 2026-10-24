@@ -96,7 +96,7 @@ export const highlights = [
   { title: 'Bash Wednesday', detail: 'Organizer of terminal scripting workshops', meta: 'Community learning' },
 ]
 
-export const bio = 'CS student at Egerton University and Kenya-based open-source developer known online as Mechantchulo. Currently Tech Lead for the Egerton University Computer Science Students Association (EUCOSSA) and a backend developer at Tickopedia; previously EUCOSSA DevOps Lead. I build scalable backends, create tools for coding agents, deploy on Linux, and break things in CTFs.'
+export const bio = 'I’m Erick Mutua, known online as Mechantchulo—a Kenya-based backend and DevOps engineer and Computer Science student at Egerton University. I’m currently Tech Lead for the Egerton University Computer Science Students Association (EUCOSSA) and a backend developer at Tickopedia; previously EUCOSSA DevOps Lead. I build scalable backends, create tools for coding agents, deploy on Linux, and break things in CTFs.'
 
 export const contactEmail = 'chulomechant@gmail.com'
 export const linkedinUrl = 'https://www.linkedin.com/in/erick-mutua-19a076303'
@@ -109,6 +109,8 @@ export const certificates = [
     issuer: 'Connected Africa Summit 2026 · ICT Authority',
     issued: 'April 2026',
     image: '/certificates/connected-africa-ctf-2026.jpeg',
+    width: 828,
+    height: 587,
     credentialUrl: '/certificates/connected-africa-ctf-2026.jpeg',
   },
   {
@@ -116,6 +118,8 @@ export const certificates = [
     issuer: 'JHUB Africa · JKUAT',
     issued: '7 April 2025',
     image: '/certificates/ai-summit-2025.png',
+    width: 773,
+    height: 446,
     credentialUrl: '/certificates/ai-summit-2025.png',
   },
 ]

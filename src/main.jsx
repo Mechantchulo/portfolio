@@ -171,7 +171,7 @@ function Hero({ theme, onBuilderMode }) {
       <div className="availability"><span className="availability-dot" /> OPEN TO WHAT'S NEXT <span className="availability-line" /></div>
       <AnimatePresence mode="wait">
         <motion.div key={theme} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.28 }}>
-          {theme === 'cyber' ? <h1>Code. Deploy.<br /><span className="hero-accent">Break. Repeat.</span></h1> : <h1>Hi, I'm<br /><span className="hero-accent">Erick Mutua.</span></h1>}
+          {theme === 'cyber' ? <h1><span className="sr-only">Erick Mutua — </span>Code. Deploy.<br /><span className="hero-accent">Break. Repeat.</span></h1> : <h1>Hi, I'm<br /><span className="hero-accent">Erick Mutua.</span></h1>}
           <p className="hero-alias">KNOWN ONLINE AS MECHANTCHULO</p>
           <p className="hero-headline">Open-Source Software Engineer, DevOps Specialist <span className="amp">&</span> Cybersecurity Enthusiast</p>
           <p className="hero-description">I build scalable backends and tools for coding agents, deploy on Linux, and break things in CTFs. Currently leading tech at EUCOSSA and working on Tickopedia's backend.</p>
@@ -203,7 +203,7 @@ function Experience() {
 function CertificateMedia({ certificate }) {
   const [imageUnavailable, setImageUnavailable] = useState(false)
   if (!certificate.image || imageUnavailable) return <div className="certificate-art-placeholder" aria-label="Certificate image unavailable"><span>CERTIFICATE</span><strong>Image</strong><span>UNAVAILABLE</span></div>
-  return <a className="certificate-image-link" href={certificate.image} target="_blank" rel="noopener noreferrer" aria-label={`Open ${certificate.title} certificate image`}><img src={certificate.image} alt={`${certificate.title} awarded to Erick Mutua`} loading="lazy" onError={() => setImageUnavailable(true)} /></a>
+  return <a className="certificate-image-link" href={certificate.image} target="_blank" rel="noopener noreferrer" aria-label={`Open ${certificate.title} certificate image`}><img src={certificate.image} alt={`${certificate.title} awarded to Erick Mutua`} width={certificate.width} height={certificate.height} loading="lazy" onError={() => setImageUnavailable(true)} /></a>
 }
 
 function Certificates() {
@@ -215,19 +215,19 @@ function Certificates() {
     rail.scrollBy({ left: direction * (cardWidth + 16), behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })
   }
   return <section id="certificates" className="section shell certificates-section">
-    <div className="certificate-heading"><SectionHeading title="Credentials." subtitle="Continuous learning, with the receipts to show for it." /><a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="inline-link">View my LinkedIn <Icon name="external" size={17} /></a></div>
+    <div className="certificate-heading"><SectionHeading title="Credentials." subtitle="Continuous learning, with the receipts to show for it." /><a href={linkedinUrl} target="_blank" rel="me noopener noreferrer" className="inline-link">View my LinkedIn <Icon name="external" size={17} /></a></div>
     {certificates.length ? <>
       <div className="certificate-controls"><button type="button" onClick={() => scroll(-1)} aria-label="Previous certificates"><Icon name="arrow" size={19} className="arrow-left" /></button><button type="button" onClick={() => scroll(1)} aria-label="Next certificates"><Icon name="arrow" size={19} /></button></div>
       <div className="certificate-rail" ref={railRef} aria-label="Certificates">{certificates.map((certificate) => <article className="certificate-card" key={certificate.title}>
         <CertificateMedia certificate={certificate} />
         <div className="certificate-card-body"><span className="certificate-label">CERTIFICATE</span><h3>{certificate.title}</h3><p>{certificate.issuer}{certificate.issued ? ` · ${certificate.issued}` : ''}</p>{certificate.credentialUrl && <a href={certificate.credentialUrl} target="_blank" rel="noopener noreferrer">View certificate <Icon name="external" size={16} /></a>}</div>
       </article>)}</div>
-    </> : <div className="certificate-empty"><div><span className="certificate-label">VERIFIED WORK</span><h3>Keep learning. Keep building.</h3><p>Explore my certificates and professional milestones on LinkedIn.</p></div><a href={linkedinUrl} target="_blank" rel="noopener noreferrer">Explore my profile <Icon name="external" size={18} /></a></div>}
+    </> : <div className="certificate-empty"><div><span className="certificate-label">VERIFIED WORK</span><h3>Keep learning. Keep building.</h3><p>Explore my certificates and professional milestones on LinkedIn.</p></div><a href={linkedinUrl} target="_blank" rel="me noopener noreferrer">Explore my profile <Icon name="external" size={18} /></a></div>}
   </section>
 }
 
 function Contact() {
-  return <section id="contact" className="contact-section"><div className="shell contact-inner"><div><p className="contact-small">GOT SOMETHING INTERESTING?</p><h2>Let's build<br /><span>what's next.</span></h2></div><div className="contact-side"><p>Backend systems, Linux deployments, security challenges, or a good problem to solve — I'm always up for a conversation.</p><a href={`mailto:${contactEmail}`} className="contact-return">Email me <Icon name="arrow" size={19} /></a><div className="social-links"><a href={linkedinUrl} target="_blank" rel="noopener noreferrer">LinkedIn <Icon name="external" size={15} /></a><a href={githubUrl} target="_blank" rel="noopener noreferrer">GitHub <Icon name="external" size={15} /></a></div></div></div></section>
+  return <section id="contact" className="contact-section"><div className="shell contact-inner"><div><p className="contact-small">GOT SOMETHING INTERESTING?</p><h2>Let's build<br /><span>what's next.</span></h2></div><div className="contact-side"><p>Backend systems, Linux deployments, security challenges, or a good problem to solve — I'm always up for a conversation.</p><a href={`mailto:${contactEmail}`} className="contact-return">Email me <Icon name="arrow" size={19} /></a><div className="social-links"><a href={linkedinUrl} target="_blank" rel="me noopener noreferrer">LinkedIn <Icon name="external" size={15} /></a><a href={githubUrl} target="_blank" rel="me noopener noreferrer">GitHub <Icon name="external" size={15} /></a></div></div></div></section>
 }
 
 function App() {
