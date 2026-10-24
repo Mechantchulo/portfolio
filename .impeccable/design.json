@@ -1,0 +1,19 @@
+{
+  "name": "Erick Mutua portfolio",
+  "modes": {
+    "cyber": {
+      "background": "#080e0d",
+      "accent": "#00ff00",
+      "secondaryAccent": "#75e5df",
+      "headingFont": "IBM Plex Mono, monospace",
+      "panelRadius": "12px"
+    },
+    "builder": {
+      "background": "#f7f7f4",
+      "text": "#11120f",
+      "headingFont": "Space Grotesk, sans-serif",
+      "panelRadius": "0px"
+    }
+  },
+  "bodyFont": "DM Sans, sans-serif"
+}
